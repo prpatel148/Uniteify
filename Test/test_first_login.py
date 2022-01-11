@@ -73,12 +73,7 @@ class TestLogin(BaseClass):
         self.driver.refresh()
 
 
-
-
         # error = WebDriverWait(self.driver, 3).until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, "div[id = 'toast-container']"))).text
         #
         # assert "Invalid" in error
         # self.driver.refresh()
-
-
-

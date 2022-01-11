@@ -61,12 +61,6 @@ class TestRegistration(BaseClass):
         else:
             registrationPage.confrimPassword().send_keys(getData["confirmPass"])
 
-
-
-
-
-
-
         # registrationPage.getCity().click()
         # registrationPage.getCity().send_keys(getData["city"])
         # registrationPage.getCountry().click()
@@ -78,16 +72,9 @@ class TestRegistration(BaseClass):
         # registrationPage.clickSubmit().click()
         # registrationPage.clickCancel().click()
 
-
-
-    @pytest.fixture(params=RegistrationData.getTestdata("test3"))
-    def getData(self, request):
-        return request.param
-
-
-
-
-
-
-
-
+    i = 1
+    while i<=4:
+        @pytest.fixture(params=RegistrationData.getTestdata(i))
+        def getData(self, request):
+            return request.param
+            i=i+1
